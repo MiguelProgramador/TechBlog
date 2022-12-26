@@ -1,0 +1,494 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+h1 {
+    color: #4e4e4e;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #4e4e45;
+}
+
+h3 {
+    color: #565656;
+    background-color: #CCC;
+    padding: 5px;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif, 'Poppins', sans-serif;
+    background-color: #e6e6e6;
+}
+
+/*      *** Formatação do header ***      */
+
+#cabecalho {
+    background-color: #f7b600;
+    padding: 15px;
+    text-align: center;
+}
+
+#area-logo, #area-menu {
+    padding: 10px;
+}
+
+.decoration {
+    color: #fff;
+}
+
+#cabecalho a:link, #cabecalho a:visited {
+    color: #fff;
+    padding: 8px 12px;
+} /* a:link -> cor dos links não visitados.   a:visited -> cor dos links visitados */
+
+#cabecalho a:hover {
+    transition: 0.2s;
+    color: #f7b600;
+    background-color: #fff;
+    text-decoration: none;
+}  /* Fim da formatação do menu */
+
+.conteudo {
+    margin: 30px;
+    padding-left: 80px;
+    
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-principal-titulo {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    padding-bottom: 120px;
+}
+
+.conteudo-principal-subtitulo {
+    display: flex;
+    font-family: 'Roboto Mono', monospace;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    padding-right: 100px;
+}
+
+.images-products {
+    position: relative;
+    margin: 10px;
+    display: flex;
+    z-index: 1;
+}
+
+.product-1 {
+    width: 170px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 280px;
+    border-radius: 20px;
+}
+
+.product-2 {
+    width: 170px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 280px;
+    border-radius: 20px;
+}
+
+.product-3 {
+    width: 170px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    border-radius: 20px;
+} /* Fim da formatação de textos da imagem */
+
+
+/* Animação ao passar o mouse em cima das imagens dos produtos */
+
+.product-1:hover {
+    transform: translateY(-5px);
+    /*          inset|Offset-X|color|Offset-Y|color             */
+    box-shadow: inset 0 0 1em rgb(191, 183, 183), 0 0 1em rgb(161, 160, 160);
+}
+
+.product-2:hover {
+    transform: translateY(-5px);
+    /*          inset|Offset-X|color|Offset-Y|color             */
+    box-shadow: inset 0 0 1em rgb(191, 183, 183), 0 0 1em rgb(161, 160, 160);
+}
+
+.product-3:hover {
+    transform: translateY(-5px);
+    /*          inset|Offset-X|color|Offset-Y|color             */
+    box-shadow: inset 0 0 1em rgb(191, 183, 183), 0 0 1em rgb(161, 160, 160);
+} /* Fim da animação */
+
+
+/* Formatação dos preços e o link âncora "saiba mais" */
+
+.product1-text {
+    display: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in;
+    font-family: 'Sarala', sans-serif;
+    color: rgb(1, 2, 7);
+    padding-top: 10px;
+    padding-left: 95px;
+}
+
+.product-1:hover +.product1-text {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+.product2-text {
+    font-family: 'Sarala', sans-serif;
+    color: rgb(1, 2, 7);
+    display: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+    visibility: hidden;
+    padding-top: 10px;
+    padding-left: 95px;
+}
+
+.product-2:hover +.product2-text {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+.product3-text {
+    font-family: 'Sarala', sans-serif;
+    color: rgb(1, 2, 7);
+    display: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+    visibility: hidden;
+    padding-top: 10px;
+    padding-left: 95px;
+}
+
+.product-3:hover +.product3-text {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Rodapé - Início */
+.rodape {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgb(41, 43, 51);
+}
+
+.rodape .logo-rodape {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.descricao {
+    font-size: 15px;
+    color: rgb(191, 191, 191);
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-rodape {
+    font-family: 'Sarala', sans-serif;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-rodape a {
+    color:rgb(191, 191, 191);
+    margin: 25px;
+}
+
+.menu-rodape a:hover {
+    color:rgba(132, 247, 255, 0.968);
+    transition: 0.4s ease-in;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    color: rgb(191, 191, 191);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.icons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons img {
+    margin: 20px;
+}
+
+.instagram-icon:hover {
+    transition: 0.4s ease-in;
+    transform: translateY(-5px);
+}
+
+.github-icon:hover {
+    transition: 0.4s ease-in;
+    transform: translateY(-5px);
+}
+
+.whatsapp-icon:hover {
+    transition: 0.4s ease-in;
+    transform: translateY(-5px);
+}
+
+.aviso {
+    background-color: rgb(83, 83, 83);
+    padding: 15px;
+}
+
+.texto-aviso {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.aviso-destaque {
+    color: rgb(107, 8, 255);
+    margin: 5px;
+}
+
+.aviso-destaque:hover {
+    color: rgb(176, 123, 255);
+    text-decoration: underline;
+    transition: 0.4s ease-in;
+} /* Fim do rodapé */
+
+
+/* Formatação da tabela do arquivo contact */           /* Arquivo Contact */
+.horario-aviso {
+    position: relative;
+    padding-left: 100px;
+    top: -70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+}
+
+.contato-com-equipe {
+    position: relative;
+    padding-left: 101px;
+    top: -60px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 15px;
+}
+
+.dias-tabela {
+    column-span: 7;
+    border: 7px solid #cdcdcd;
+    background-color: #f5f2f2;
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+    font-family: 'Poppins', sans-serif;
+}
+
+.horas-tabela {
+    border: 7px solid #cdcdcd;
+    background-color: #f5f2f2;
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+    font-family: 'Poppins', sans-serif;
+}
+
+.itens1-tabela {
+    border: 7px solid #cdcdcd;
+    padding: 50px;
+}
+
+
+table * {
+    border: 2px solid #cdcdcd;
+    padding: 0.5rem 0.75rem;
+    display: block;
+    
+}
+
+table {
+    padding: 50px;
+    margin: 50px;
+}
+
+tr {
+    padding: 10px;
+    margin: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+.tabela-informativa {
+    border: 100px;
+    border-color: black;
+}
+
+.dias-tabela {
+    position: relative;
+    columns: 5;
+    padding-left: 50px;
+    margin: 10px auto;
+}
+
+.horas-tabela {
+    position: relative;
+    columns: 5;
+    padding-left: 50px;
+    margin: 10px auto;
+}
+
+.desc-tabela {
+    display: flex;
+    font-family: 'Roboto Monospace', monospace;
+    position: relative;
+    padding-left: 100px;
+    top: -90px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* 2º coluna das imagens dos produtos */
+
+.images-products-column2 {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    margin: 80px 10px;
+    z-index: 1;
+}
+
+.product-4 {
+    position: relative;
+    display: flex;
+    width: 170px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 280px;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.product-5 {
+    width: 170px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 280px;
+    border-radius: 20px;
+}
+
+.product-6 {
+    width: 170px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    border-radius: 20px;
+}
+
+.product4-text {
+    display: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in;
+    font-family: 'Sarala', sans-serif;
+    color: rgb(1, 2, 7);
+    padding-top: 10px;
+    padding-left: 95px;
+}
+
+.product-4:hover +.product4-text {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+.product5-text {
+    display: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in;
+    font-family: 'Sarala', sans-serif;
+    color: rgb(1, 2, 7);
+    padding-top: 10px;
+    padding-left: 95px;
+}
+
+.product-5:hover +.product5-text {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+.product6-text {
+    display: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in;
+    font-family: 'Sarala', sans-serif;
+    color: rgb(1, 2, 7);
+    padding-top: 10px;
+    padding-left: 95px;
+}
+
+.product-6:hover +.product6-text {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animação ao passar o mouse em cima das imagens dos produtos */
+
+.product-4:hover {
+    transform: translateY(-5px);
+    /*          inset|Offset-X|color|Offset-Y|color             */
+    box-shadow: inset 0 0 1em rgb(191, 183, 183), 0 0 1em rgb(161, 160, 160);
+}
+
+.product-5:hover {
+    transform: translateY(-5px);
+    /*          inset|Offset-X|color|Offset-Y|color             */
+    box-shadow: inset 0 0 1em rgb(191, 183, 183), 0 0 1em rgb(161, 160, 160);
+} /* Fim da animação */
